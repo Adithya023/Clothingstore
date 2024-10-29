@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="370.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.AddProductsBySupplierFormController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="75.0" prefWidth="374.0" styleClass="updateProductsTitleBar" stylesheets="@../styles/style.css" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label style="-fx-text-fill: #c9c5ba;" text="Add Products To Supplier">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutY="80.0" prefHeight="345.0" prefWidth="374.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Pane layoutX="10.0" layoutY="159.0" maxHeight="34.0" minHeight="15.0" prefHeight="34.0" prefWidth="374.0" />
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="6.0" prefWidth="250.0">
+               <children>
+                  <Label text="Product Name : ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSetProductName" maxHeight="20.0" minHeight="20.0" prefHeight="20.0">
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="28.0" maxHeight="15.0" minHeight="18.0" prefHeight="15.0" prefWidth="250.0" />
+            <HBox layoutX="10.0" layoutY="43.0" prefHeight="6.0" prefWidth="250.0">
+               <children>
+                  <Label text="Quantity : ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="spinnerSetProductQuantity" maxHeight="24.0" minHeight="24.0" prefHeight="24.0" prefWidth="72.0" stylesheets="@../styles/style.css">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Spinner>
+               </children>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="60.0" maxHeight="15.0" minHeight="18.0" prefHeight="15.0" prefWidth="250.0" />
+            <HBox layoutX="10.0" layoutY="76.0" prefHeight="6.0" prefWidth="250.0">
+               <children>
+                  <Label text="Unit Price : ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSetProductUnitPrice" maxHeight="20.0" minHeight="20.0" prefHeight="20.0">
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="93.0" maxHeight="15.0" minHeight="18.0" prefHeight="15.0" prefWidth="250.0" />
+            <HBox layoutX="10.0" layoutY="108.0" prefHeight="6.0" prefWidth="250.0">
+               <children>
+                  <Label text="Category : ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSetProductCategory" maxHeight="20.0" minHeight="20.0" prefHeight="20.0">
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="28.0" maxHeight="56.0" minHeight="15.0" prefHeight="31.0" prefWidth="374.0" />
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="374.0">
+               <children>
+                  <JFXButton onAction="#btnAddProductOnAction" styleClass="btn" stylesheets="@../styles/style.css" text="ADD PRODUCT" textFill="#feffda">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#btnCancelAddProductsOnAction" styleClass="btn" stylesheets="@../styles/style.css" text="CANCEL" textFill="#feffda">
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

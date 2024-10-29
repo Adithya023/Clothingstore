@@ -1,0 +1,102 @@
+.bodyBGHome{
+    -fx-background-image: url("../img/Clothing-store.jpg")
+}
+
+.bodyBGAdminLogin{
+    -fx-background-color: linear-gradient(to bottom right, #e9e5d5, #a99759);
+}
+
+.adminUserSelectionBox{
+    -fx-background-color: rgba(230, 221, 174,0.7);
+}
+
+.btnHomePanel,.btnAdminPanel,.btnMain{
+    -fx-background-radius: 12;
+    -fx-background-color:  linear-gradient(to bottom right, #4a3f18, #84712a);
+}
+
+.btnHomePanel:hover,.btnAdminPanel:hover,.btnMain:hover{
+    -fx-background-color: linear-gradient(to bottom left, #1d1909, #3b3213);
+}
+
+.sidePaneDashboard{
+    -fx-background-color: linear-gradient(to bottom left, #b3a46d, #d4cbac);
+    -fx-background-radius: 0 20 0 0;
+}
+
+.sidePanelDashboardBtn{
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.sidePanelDashboardBtn: hover{
+    -fx-background-color: rgba(44, 37, 14, 0.4);
+}
+
+.rightPanelDashboard{
+    -fx-background-color: #f5f0df;
+}
+
+.btnDashboardPanel,.btn{
+    -fx-background-radius: 8;
+    -fx-background-color:  #80795d;
+}
+
+.btnDashboardPanel:hover,.btn:hover{
+    -fx-background-color: #5c522f;
+}
+
+.btnCheckOutDashboard, .btnAddToCart{
+    -fx-background-radius: 8;
+    -fx-background-color: #8b7831;
+}
+
+.btnCheckOutDashboard:hover, .btnAddToCart:hover{
+    -fx-background-color: #77672a;
+}
+
+.itemContainerDashboard{
+    -fx-background-color: linear-gradient(to top right,  #c7ab46, #ddcd90);
+    -fx-background-radius: 10;
+}
+
+.table-view .column-header-background{
+        -fx-background-radius:8 8 0 0;
+        -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header, .table-view .filler{
+        -fx-size:40px;
+        -fx-border-width: 0 0 10 0;
+}
+
+.table-view .column-header .label {
+        -fx-text-fill: #50441c;
+}
+
+.spinner {
+    -fx-prompt-text-fill: black;
+    -fx-text-fill: black;
+    -fx-background-color: none;
+
+    -fx-padding: 0 0 3 0;
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+}
+
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #575757;
+    -fx-font-size: 10px;
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #8d8053;
+}
+
+.updateProductsTitleBar{
+    -fx-background-color: linear-gradient(to right,  #5c522f, #6e6546);
+}

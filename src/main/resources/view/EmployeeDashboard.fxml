@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1200.0" style="-fx-background-color: #fff;" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.EmployeeDashboardFormController">
+   <children>
+      <AnchorPane fx:id="anchorPaneCatalog" layoutX="216.8" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="984.0" visible="false">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="674.4" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="309.0" styleClass="rightPanelDashboard" stylesheets="@../styles/style.css">
+               <children>
+                  <Pane layoutX="10.0" layoutY="132.0" prefHeight="173.0" prefWidth="310.0" />
+                  <VBox prefHeight="115.0" prefWidth="310.0">
+                     <children>
+                        <Label text="All Time Status :">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Products :">
+                                 <padding>
+                                    <Insets left="60.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalProducts" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="28.0" prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Orders :">
+                                 <padding>
+                                    <Insets left="60.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalOrders" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="53.0" prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Stock :">
+                                 <padding>
+                                    <Insets left="60.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalStock" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="22.0" layoutY="136.0" maxWidth="-Infinity" minWidth="75.0" prefHeight="286.0" prefWidth="250.0" styleClass="itemContainerDashboard" stylesheets="@../styles/style.css">
+                     <children>
+                        <Pane prefHeight="21.0" prefWidth="250.0" />
+                        <HBox prefHeight="6.0" prefWidth="250.0">
+                           <children>
+                              <Label text="Product ID : ">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCatalogProductID" prefHeight="18.0" prefWidth="119.0">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="112.0" maxHeight="15.0" minHeight="15.0" prefHeight="15.0" prefWidth="250.0" />
+                        <HBox prefHeight="37.0" prefWidth="250.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="98.0" text="Product Name : ">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCatalogProductName" alignment="TOP_LEFT" prefHeight="38.0" prefWidth="98.0" textOverrun="CLIP" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="60.0" maxHeight="15.0" minHeight="15.0" prefHeight="15.0" prefWidth="250.0" />
+                        <HBox prefHeight="15.0" prefWidth="250.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Unit Price : ">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCatalogUnitPrice" prefHeight="18.0" prefWidth="126.0">
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="104.0" maxHeight="15.0" minHeight="15.0" prefHeight="15.0" prefWidth="250.0" />
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="122.0" prefHeight="15.0" prefWidth="250.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="71.0" text="Quantity : ">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="spinnerCatalogQuantity" maxHeight="24.0" minHeight="24.0" prefHeight="20.0" prefWidth="67.0" visible="false" />
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="109.0" maxHeight="15.0" minHeight="15.0" prefHeight="15.0" prefWidth="250.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="250.0">
+                           <children>
+                              <Label text="Size : ">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="cmbCatalogSize" maxHeight="23.0" minHeight="23.0" prefHeight="23.0" prefWidth="56.0" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="250.0" />
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btnAddToCart" disable="true" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="24.0" prefWidth="120.0" styleClass="btnAddToCart" stylesheets="@../styles/style.css" text="Add to Cart" textFill="#e1dbbf">
+                                 <font>
+                                    <Font name="Dubai Medium" size="16.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <Pane layoutX="10.0" layoutY="153.0" prefHeight="10.0" prefWidth="310.0" />
+                  <Button fx:id="btnCheckOut" disable="true" mnemonicParsing="false" onAction="#btnCheckoutOnAction" prefHeight="42.0" prefWidth="250.0" styleClass="btnCheckOutDashboard" stylesheets="@../styles/style.css" text="PROCEED TO CHECKOUT" textFill="WHITE">
+                     <font>
+                        <Font name="Britannic Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <Button layoutX="42.0" layoutY="588.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="199.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Return Orders" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="81.0" layoutY="18.0" text="Welcome Back, ">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="262.0" layoutY="588.0" mnemonicParsing="false" onAction="#btnCatalogAddProductOnAction" prefHeight="37.0" prefWidth="199.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Add Product" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TableView fx:id="tblCatalogProducts" layoutX="43.0" layoutY="82.0" prefHeight="478.0" prefWidth="591.0">
+               <columns>
+                  <TableColumn fx:id="columnCatalogProductsID" prefWidth="55.999996185302734" text="id" />
+                  <TableColumn fx:id="columnCatalogProductsName" prefWidth="138.39999389648438" text="name" />
+                  <TableColumn fx:id="columnCatalogProductsCategoryID" prefWidth="70.40003967285156" text="category_id" />
+                  <TableColumn fx:id="columnCatalogProductsQuantity" prefWidth="52.00006103515625" text="quantity" />
+                  <TableColumn fx:id="columnCatalogProductsUnitPrice" prefWidth="64.79998779296875" text="unitPrice" />
+                  <TableColumn fx:id="columnCatalogProductsSupplierID" prefWidth="69.5999755859375" text="supplier_id" />
+                  <TableColumn fx:id="columnCatalogProductsAction" prefWidth="132.800048828125" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneSuppliers" layoutX="216.8" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="984.0" visible="false">
+         <children>
+            <TableView fx:id="tblSuppliers" layoutX="43.0" layoutY="352.0" prefHeight="270.0" prefWidth="591.0">
+               <columns>
+                  <TableColumn fx:id="columnSuppliersID" prefWidth="47.999996185302734" text="id" />
+                  <TableColumn fx:id="columnSuppliersName" prefWidth="140.79998779296875" text="name" />
+                  <TableColumn fx:id="columnSuppliersCompany" prefWidth="117.59999084472656" text="company" />
+                  <TableColumn fx:id="columnSuppliersEmail" prefWidth="141.5999755859375" text="email" />
+                  <TableColumn fx:id="columnSuppliersAction" prefWidth="138.39996337890625" />
+               </columns>
+            </TableView>
+            <VBox alignment="TOP_CENTER" layoutX="674.4" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="309.0" styleClass="rightPanelDashboard" stylesheets="@../styles/style.css">
+               <children>
+                  <Pane layoutX="10.0" layoutY="132.0" prefHeight="165.0" prefWidth="310.0" />
+                  <VBox prefHeight="91.0" prefWidth="310.0">
+                     <children>
+                        <Label text="Total Counts : ">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Suppliers : ">
+                                 <padding>
+                                    <Insets left="60.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalSuppliers" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="53.0" prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Companies :">
+                                 <padding>
+                                    <Insets left="60.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalCompanies" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+                  <Pane layoutX="10.0" layoutY="153.0" prefHeight="30.0" prefWidth="310.0" />
+                  <Label prefHeight="19.0" prefWidth="364.0" text="Supplied Items : ">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="10.0" layoutY="275.0" prefHeight="13.0" prefWidth="310.0" />
+                  <TableView fx:id="tblSuppliersSuppliedProducts" maxWidth="260.0" prefHeight="300.0" prefWidth="260.0">
+                    <columns>
+                      <TableColumn fx:id="columnSuppliersSuppliedProductsSupplierID" prefWidth="67.99999505281448" text="supplier_id" />
+                      <TableColumn fx:id="columnSuppliersSuppliedProductsID" prefWidth="60.79993438720703" text="id" />
+                        <TableColumn fx:id="columnSuppliersSuppliedProductsName" prefWidth="128.00001525878906" text="name" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <Label layoutX="81.0" layoutY="18.0" text="SUPPLIERS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+            </Label>
+            <VBox layoutX="43.0" layoutY="76.0" prefHeight="253.0" prefWidth="591.0">
+               <children>
+                  <Pane prefHeight="11.0" prefWidth="591.0" />
+                  <HBox maxWidth="590.0" minWidth="590.0" prefHeight="238.0" prefWidth="590.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="234.0" prefWidth="293.0">
+                           <children>
+                              <Pane prefHeight="18.0" prefWidth="258.0" />
+                              <JFXTextField fx:id="txtAddSupplierName" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="240.0" promptText="Name" />
+                              <Pane layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="258.0" />
+                              <JFXTextField fx:id="txtAddSupplierCompany" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="240.0" promptText="Company" />
+                              <Pane layoutX="10.0" layoutY="55.0" prefHeight="18.0" prefWidth="258.0" />
+                              <JFXTextField fx:id="txtAddSupplierEmail" layoutX="10.0" layoutY="36.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="240.0" promptText="Email-Address" />
+                              <Pane prefHeight="50.0" prefWidth="294.0" />
+                              <HBox alignment="CENTER" prefHeight="11.0" prefWidth="591.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#btnAddSupplierOnAction" prefHeight="35.0" prefWidth="110.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Add Supplier" textFill="#e1dbbf">
+                                       <font>
+                                          <Font name="Dubai Medium" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" maxHeight="35.0" minHeight="25.0" mnemonicParsing="false" onAction="#btnClearAddSupplierOnAction" prefHeight="35.0" prefWidth="110.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Clear" textAlignment="CENTER" textFill="#e1dbbf">
+                                       <font>
+                                          <Font name="Dubai Medium" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="234.0" prefWidth="295.0">
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#btnAddProductForTheSupplierOnAction" prefHeight="35.0" prefWidth="216.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Add Products For the Supplier" textFill="#e1dbbf">
+                                 <font>
+                                    <Font name="Dubai Medium" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets left="-50.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Pane prefHeight="18.0" prefWidth="295.0" />
+                              <TableView fx:id="tblSuppliersAddProducts" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="262.0">
+                                <columns>
+                                  <TableColumn fx:id="columnSuppliersAddProductsCategoryName" prefWidth="129.59996682405472" text="category" />
+                                  <TableColumn fx:id="columnSuppliersAddProductsProductName" prefWidth="131.2000274658203" text="product" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneOrders" layoutX="216.8" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="984.0" visible="false">
+         <children>
+            <Label layoutX="81.0" layoutY="18.0" text="ORDERS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutX="674.4" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="309.0" styleClass="rightPanelDashboard" stylesheets="@../styles/style.css">
+               <children>
+                  <Pane layoutX="10.0" layoutY="132.0" prefHeight="165.0" prefWidth="310.0" />
+                  <VBox prefHeight="91.0" prefWidth="310.0">
+                     <children>
+                        <Label text="All Time Status :">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Customers :">
+                                 <padding>
+                                    <Insets left="60.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalCustomerCount" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="28.0" prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Orders :">
+                                 <padding>
+                                    <Insets left="60.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalOrderCount" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="53.0" prefHeight="14.0" prefWidth="310.0">
+                           <children>
+                              <Label text="Total Returns :">
+                                 <padding>
+                                    <Insets left="60.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalReturnOrderCount" layoutX="10.0" layoutY="10.0">
+                                 <padding>
+                                    <Insets left="5.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+                  <Pane layoutX="10.0" layoutY="153.0" prefHeight="29.0" prefWidth="310.0" />
+                  <Label prefHeight="19.0" prefWidth="364.0" text="Order Items :">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="13.0" prefWidth="310.0" />
+                  <TableView fx:id="tblOrderItems" maxWidth="260.0" prefHeight="299.0" prefWidth="260.0">
+                     <columns>
+                        <TableColumn fx:id="columnOrderItemsProductID" prefWidth="46.399962246418" text="id" />
+                        <TableColumn fx:id="columnOrderItemsProductName" prefWidth="122.40008926391602" text="name" />
+                        <TableColumn fx:id="columnOrderItemsProductSize" prefWidth="88.80006408691406" text="size" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <TableView fx:id="tblOrders" layoutX="43.0" layoutY="90.0" prefHeight="321.0" prefWidth="591.0">
+               <columns>
+                  <TableColumn fx:id="columnOrdersID" prefWidth="49.599910736083984" text="ID" />
+                  <TableColumn fx:id="columnOrdersCustomerID" prefWidth="82.4000244140625" text="CustomerID" />
+                  <TableColumn fx:id="columnOrdersTime" prefWidth="94.39997863769531" text="Time" />
+                  <TableColumn fx:id="columnOrdersDate" prefWidth="95.20001220703125" text="Date" />
+                  <TableColumn fx:id="columnOrdersPaymentType" prefWidth="93.5999755859375" text="PaymentType" />
+                  <TableColumn fx:id="columnOrdersItemCount" prefWidth="69.60003662109375" text="ItemCount" />
+                  <TableColumn fx:id="columnOrdersTotal" prefWidth="101.60009765625" text="Total" />
+               </columns>
+            </TableView>
+            <Label layoutX="43.0" layoutY="440.0" prefHeight="19.0" prefWidth="364.0" text="Return Orders :">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView layoutX="43.0" layoutY="470.0" maxWidth="590.0" prefHeight="149.0" prefWidth="590.0">
+               <columns>
+                  <TableColumn prefWidth="87.19994735717773" text="ReturnID" />
+                  <TableColumn prefWidth="109.60003662109375" text="OrderID" />
+                  <TableColumn prefWidth="98.39997863769531" text="ProductID" />
+                  <TableColumn prefWidth="101.5999755859375" text="Amount" />
+                  <TableColumn prefWidth="87.199951171875" text="Quantity" />
+                  <TableColumn prefWidth="108.7999267578125" text="Return Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneReports" layoutX="216.8" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="984.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="674.4" maxHeight="651.0" minHeight="651.0" prefHeight="651.0" prefWidth="309.0" styleClass="rightPanelDashboard" stylesheets="@../styles/style.css">
+               <children>
+                  <Pane layoutX="10.0" layoutY="132.0" prefHeight="191.0" prefWidth="311.0" />
+                  <ImageView fitHeight="415.0" fitWidth="296.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ReportImage.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <Label layoutX="81.0" layoutY="18.0" text="REPORTS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="162.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnLoadInventoryReportOnAction" prefHeight="77.0" prefWidth="364.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Inventory Report" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="31.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="162.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnLoadEmployeeReportOnAction" prefHeight="77.0" prefWidth="364.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Employee Report" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="31.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="162.0" layoutY="329.0" mnemonicParsing="false" onAction="#btnLoadCustomerReportOnAction" prefHeight="77.0" prefWidth="364.0" styleClass="btnDashboardPanel" stylesheets="@../styles/style.css" text="Customer Report" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="31.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutX="891.0" maxHeight="651.0" minHeight="142.0" prefHeight="142.0" prefWidth="310.0" stylesheets="@../styles/style.css">
+         <children>
+            <JFXButton ellipsisString="" maxWidth="39.0" minWidth="21.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="39.0">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/closeBtnAdmin.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="270.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Pane prefHeight="4.0" prefWidth="264.0" style="-fx-background-color: #b6b6b6;" />
+            <Pane prefHeight="20.0" prefWidth="310.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="310.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/DateIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" right="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox maxWidth="-Infinity" minWidth="75.0" prefHeight="64.0" prefWidth="170.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Date : ">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblDate">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Time : ">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTime">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="12.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="20.0" prefWidth="310.0" />
+            <Pane prefHeight="4.0" prefWidth="264.0" style="-fx-background-color: #b6b6b6;" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="107.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="46.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/StoreIcon.png" />
+               </image>
+            </ImageView>
+            <Label text="CLOTHIFY" textFill="#333127">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="95.0" layoutY="107.2" prefHeight="568.0" prefWidth="217.0" styleClass="sidePaneDashboard" stylesheets="@../styles/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="983.0" AnchorPane.topAnchor="107.0">
+         <children>
+            <Pane prefHeight="65.0" prefWidth="202.0" />
+            <Button fx:id="btnCatalog" ellipsisString="" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" onAction="#btnCatalogOnAction" prefWidth="200.0" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="186.0" style="-fx-background-color: transparent;" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+                     <children>
+                        <ImageView fitHeight="54.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/CatalogIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Catalog" textFill="#efece3">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" right="5.0" top="12.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="226.0" />
+            <Button fx:id="btnSuppliers" ellipsisString="" layoutX="11.0" layoutY="80.0" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" prefWidth="200.0" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="186.0" style="-fx-background-color: transparent;" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/SupplierIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Suppliers" textFill="#efece3">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" top="8.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Pane layoutX="10.0" layoutY="152.0" prefHeight="41.0" prefWidth="226.0" />
+            <Button fx:id="btnOrders" ellipsisString="" layoutX="11.0" layoutY="179.0" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" onAction="#btnOrdersOnAction" prefWidth="200.0" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="186.0" style="-fx-background-color: transparent;" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/OrdersIcon.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="-20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Orders" textFill="#efece3">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" top="8.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Pane layoutX="10.0" layoutY="247.0" prefHeight="43.0" prefWidth="226.0" />
+            <Button fx:id="btnReports" ellipsisString="" layoutX="11.0" layoutY="275.0" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" onAction="#btnReportsOnAction" prefWidth="200.0" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="186.0" style="-fx-background-color: transparent;" styleClass="sidePanelDashboardBtn" stylesheets="@../styles/style.css">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ReportsIcon.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Reports" textFill="#efece3">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" top="8.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="screen" disable="true" opacity="0.75" prefHeight="651.2" prefWidth="1201.4" style="-fx-background-color: black;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

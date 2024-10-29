@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="448.0" prefWidth="682.0" scaleShape="false" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <VBox alignment="TOP_RIGHT" prefHeight="448.0" prefWidth="535.0" styleClass="bodyBGHome" stylesheets="@../styles/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutX="354.0" layoutY="75.0" opacity="0.7" prefHeight="312.0" prefWidth="279.0" style="-fx-background-color: f1e8b7; -fx-background-radius: 15;">
+         <effect>
+            <BoxBlur height="152.75" iterations="2" width="102.71" />
+         </effect>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="355.0" layoutY="76.0" prefHeight="312.0" prefWidth="279.0" style="-fx-background-radius: 15;" styleClass="adminUserSelectionBox" stylesheets="@../styles/style.css">
+         <children>
+            <Pane prefHeight="30.0" prefWidth="279.0" />
+            <ImageView fitHeight="114.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="30.0" prefWidth="279.0" />
+            <Button mnemonicParsing="false" onAction="#btnAdminLoginFormOnAction" prefHeight="37.0" prefWidth="199.0" styleClass="btnHomePanel" stylesheets="@../styles/style.css" text="Admin" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane prefHeight="21.0" prefWidth="279.0" />
+            <Button layoutX="108.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnEmployeeLoginFormOnAction" prefHeight="26.0" prefWidth="200.0" styleClass="btnHomePanel" stylesheets="@../styles/style.css" text="Employee" textFill="#e1dbbf">
+               <font>
+                  <Font name="Dubai Medium" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <JFXButton ellipsisString="" layoutX="640.0" maxWidth="39.0" minWidth="21.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="39.0">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/closeBtnHome.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
